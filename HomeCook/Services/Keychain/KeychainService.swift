@@ -10,26 +10,17 @@ class KeychainService {
         self.keychain = keychain
     }
     
-    func get(_ key: String) -> String? {
-        return keychain.get(key)
+    func get(_ key: KeychainKey) -> String? {
+        return keychain.get(key.name)
     }
     
     @discardableResult
-    func set(_ value: String, key: String) -> Bool {
-        return keychain.set(value, forKey: key)
+    func set(_ value: String, key: KeychainKey) -> Bool {
+        return keychain.set(value, forKey: key.name)
     }
     
     @discardableResult
     func delete(_ key: String) -> Bool {
         return keychain.delete(key)
-    }
-    
-    func clearKeychainOnFirstRun() {
-        if !UserDefaults.standard.bool(forKey: "hasRunBefore") {
-            keychain.clear()
-            
-            UserDefaults.standard.set(true, forKey: "hasRunBefore")
-            UserDefaults.standard.synchronize()
-        }
     }
 }

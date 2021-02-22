@@ -5,10 +5,10 @@ enum Environment {
     case Production
 }
 
-class APIService {
+class NetworkService {
     static let environment: Environment = .Development
-    static var shared: APIService {
-        return APIService(session: Session())
+    static var shared: NetworkService {
+        return NetworkService(session: Session())
     }
     
     private let session: Session
@@ -43,7 +43,7 @@ class APIService {
             if response.response?.statusCode == 401 {
                 // request is unauthorized per JWT
                 // try acquiring new JWT token using user refresh token
-                guard let userRefreshToken = KeychainManager.shared.get("refresh_token") else {
+                guard let userRefreshToken = KeychainService.shared.get(.RefreshToken) else {
                     DispatchQueue.main.async {
                         completion(nil, ErrorObject(error: "Your session has expired. Please sign in again.".localized))
                         Authentication.signOut()
@@ -66,7 +66,7 @@ class APIService {
                         return
                     }
                     // acquired new JWT token. save it and recall the initiating request
-                    KeychainManager.shared.set(token, key: "token")
+                    KeychainManager.shared.set(token, key: .AuthToken)
                     self.call(to: endpoint, params: params, completion: completion)
                 }
                 return
@@ -162,7 +162,7 @@ class APIService {
             if response.response?.statusCode == 401 {
                 // request is unauthorized per JWT
                 // try acquiring new JWT token using user refresh token
-                guard let userRefreshToken = KeychainManager.shared.get("refresh_token") else {
+                guard let userRefreshToken = KeychainManager.shared.get(.RefreshToken) else {
                     DispatchQueue.main.async {
                         completion(nil, ErrorObject(error: "Your session has expired. Please sign in again.".localized))
                         Authentication.signOut()
@@ -185,7 +185,7 @@ class APIService {
                         return
                     }
                     // acquired new JWT token. save it and recall the initiating request
-                    KeychainManager.shared.set(token, key: "token")
+                    KeychainManager.shared.set(token, key: .Token)
                     self.upload(fileData, to: route, withExtension: fileExtension, withType: mimeType, completion: completion)
                 }
                 return

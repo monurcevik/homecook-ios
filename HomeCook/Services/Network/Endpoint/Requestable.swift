@@ -1,10 +1,16 @@
 import Alamofire
 
-enum Endpoint {
-    
+protocol Requestable {
+    var baseURL: String { get }
+    var path: String { get }
+    var httpMethod: HTTPMethod { get }
+    var headers: HTTPHeaders { get }
+    var url: URL { get }
+    var encoding: ParameterEncoding { get }
+    var version: String { get }
 }
 
-extension Endpoint: Requestable {
+extension Requestable {
     var baseURL: String {
         switch APIService.environment {
         case .Development:
@@ -16,25 +22,6 @@ extension Endpoint: Requestable {
     
     var version: String {
         return "/v1.0"
-    }
-    
-    var path: String {
-        var tempPath: String!
-        let token = KeychainService.shared.get("token") ?? "NOT_FOUND"
-        /*switch self {
-        case .getUserProfile(let id):
-            tempPath = "/user/\(id)/profile?token=\(token)"
-        }*/
-        
-        return tempPath
-    }
-    
-    var httpMethod: HTTPMethod {
-        /*switch self {
-        case .logDeepLink:
-            return .post
-        }*/
-        return .post
     }
     
     var headers: HTTPHeaders {
@@ -51,5 +38,4 @@ extension Endpoint: Requestable {
             return URLEncoding.default
         }
     }
-    
 }
