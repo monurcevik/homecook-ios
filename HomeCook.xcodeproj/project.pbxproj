@@ -99,6 +99,11 @@
 		77C023FD25E423EA002310E7 /* HomeCook */ = {
 			isa = PBXGroup;
 			children = (
+				77C0243525E42424002310E7 /* Network */,
+				77C0243425E4241F002310E7 /* Services */,
+				77C0243325E42419002310E7 /* Controllers */,
+				77C0243225E42415002310E7 /* Models */,
+				77C0243125E42410002310E7 /* Views */,
 				77C023FE25E423EA002310E7 /* AppDelegate.swift */,
 				77C0240025E423EA002310E7 /* SceneDelegate.swift */,
 				77C0240225E423EA002310E7 /* ViewController.swift */,
@@ -126,6 +131,41 @@
 				77C0242225E423ED002310E7 /* Info.plist */,
 			);
 			path = HomeCookUITests;
+			sourceTree = "<group>";
+		};
+		77C0243125E42410002310E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		77C0243225E42415002310E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		77C0243325E42419002310E7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		77C0243425E4241F002310E7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		77C0243525E42424002310E7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
