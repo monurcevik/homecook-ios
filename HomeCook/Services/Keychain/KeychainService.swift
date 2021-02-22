@@ -11,16 +11,16 @@ class KeychainService {
     }
     
     func get(_ key: KeychainKey) -> String? {
-        return keychain.get(key.name)
+            return keychain.get(key.name)
     }
     
     @discardableResult
     func set(_ value: String, key: KeychainKey) -> Bool {
-        return keychain.set(value, forKey: key.name)
+            return keychain.set(value, forKey: key.name)
     }
     
     @discardableResult
-    func delete(_ key: String) -> Bool {
-        return keychain.delete(key)
+    func delete(_ key: KeychainKey) -> Bool {
+        return keychain.delete(key.name)
     }
 }
