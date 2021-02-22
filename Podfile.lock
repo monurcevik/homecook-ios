@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (5.3.0)
+  - KeychainSwift (19.0.0)
+  - Kingfisher (5.15.8):
+    - Kingfisher/Core (= 5.15.8)
+  - Kingfisher/Core (5.15.8)
+  - SnapKit (5.0.1)
+  - SwiftLint (0.42.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.3.0)
+  - KeychainSwift (~> 19.0)
+  - Kingfisher (~> 5.13)
+  - SnapKit (~> 5.0.0)
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - KeychainSwift
+    - Kingfisher
+    - SnapKit
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Alamofire: 2c792affbdc2f18016e08fdbcacd60aebe1ba593
+  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
+
+PODFILE CHECKSUM: 4f897c15f9605e5886cd8d32f1304449755f78e6
+
+COCOAPODS: 1.10.1
