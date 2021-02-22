@@ -6,7 +6,7 @@ enum Endpoint {
 
 extension Endpoint: Requestable {
     var baseURL: String {
-        switch APIManager.environment {
+        switch APIService.environment {
         case .Development:
             return ""
         case .Production:
@@ -20,7 +20,7 @@ extension Endpoint: Requestable {
     
     var path: String {
         var tempPath: String!
-        let token = KeychainManager.shared.get("token") ?? "NOT_FOUND"
+        let token = KeychainService.shared.get("token") ?? "NOT_FOUND"
         /*switch self {
         case .getUserProfile(let id):
             tempPath = "/user/\(id)/profile?token=\(token)"

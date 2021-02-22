@@ -5,10 +5,10 @@ enum Environment {
     case Production
 }
 
-class APIManager {
+class APIService {
     static let environment: Environment = .Development
-    static let shared: APIManager {
-        return APIManager(session: Session())
+    static var shared: APIService {
+        return APIService(session: Session())
     }
     
     private let session: Session
