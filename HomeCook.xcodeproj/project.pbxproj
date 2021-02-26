@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1A4AE820EB40A3787EF8B33C /* Pods_HomeCookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3071D26FFF669071B5CA4CCF /* Pods_HomeCookTests.framework */; };
 		2CA483EB1A087C96CF4AE045 /* Pods_HomeCook_HomeCookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DBBBD6A4A791BCA5F976AD /* Pods_HomeCook_HomeCookUITests.framework */; };
+		771F8CAC25E9258F00CCD3A0 /* HCRecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771F8CAB25E9258F00CCD3A0 /* HCRecipeCardView.swift */; };
+		771F8CB225E92B0B00CCD3A0 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771F8CB125E92B0B00CCD3A0 /* UIView+Shadow.swift */; };
 		77C023FF25E423EA002310E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C023FE25E423EA002310E7 /* AppDelegate.swift */; };
 		77C0240125E423EA002310E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0240025E423EA002310E7 /* SceneDelegate.swift */; };
 		77C0240325E423EA002310E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0240225E423EA002310E7 /* ViewController.swift */; };
@@ -50,6 +52,8 @@
 		608F81B93FCC71649CB046E7 /* Pods-HomeCookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeCookTests.release.xcconfig"; path = "Target Support Files/Pods-HomeCookTests/Pods-HomeCookTests.release.xcconfig"; sourceTree = "<group>"; };
 		64DBBBD6A4A791BCA5F976AD /* Pods_HomeCook_HomeCookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeCook_HomeCookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3FD6EEEA433B006BD8A61D /* Pods-HomeCook-HomeCookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeCook-HomeCookUITests.debug.xcconfig"; path = "Target Support Files/Pods-HomeCook-HomeCookUITests/Pods-HomeCook-HomeCookUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		771F8CAB25E9258F00CCD3A0 /* HCRecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCRecipeCardView.swift; sourceTree = "<group>"; };
+		771F8CB125E92B0B00CCD3A0 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		77C023FB25E423EA002310E7 /* HomeCook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeCook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C023FE25E423EA002310E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77C0240025E423EA002310E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		771F8CB025E92AF700CCD3A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				771F8CB125E92B0B00CCD3A0 /* UIView+Shadow.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		77C023F225E423E9002310E7 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +142,7 @@
 		77C023FD25E423EA002310E7 /* HomeCook */ = {
 			isa = PBXGroup;
 			children = (
+				771F8CB025E92AF700CCD3A0 /* Extensions */,
 				77C0243425E4241F002310E7 /* Services */,
 				77C0243325E42419002310E7 /* Controllers */,
 				77C0243225E42415002310E7 /* Models */,
@@ -165,6 +178,7 @@
 		77C0243125E42410002310E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				771F8CAB25E9258F00CCD3A0 /* HCRecipeCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -491,6 +505,8 @@
 				77C024A925E452D8002310E7 /* Requestable.swift in Sources */,
 				77C023FF25E423EA002310E7 /* AppDelegate.swift in Sources */,
 				77C0244E25E42932002310E7 /* KeychainService.swift in Sources */,
+				771F8CAC25E9258F00CCD3A0 /* HCRecipeCardView.swift in Sources */,
+				771F8CB225E92B0B00CCD3A0 /* UIView+Shadow.swift in Sources */,
 				77C0240125E423EA002310E7 /* SceneDelegate.swift in Sources */,
 				77C0245E25E43F09002310E7 /* Recipe.swift in Sources */,
 			);

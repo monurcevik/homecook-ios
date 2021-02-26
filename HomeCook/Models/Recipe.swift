@@ -1,3 +1,5 @@
+import Foundation
+
 struct Recipe: Codable {
     let id: Int?
     let name: String?
@@ -5,13 +7,13 @@ struct Recipe: Codable {
     let cook: User?
     let instructions: String?
     let duration: Double? // in seconds
-    let difficulty: RecipeDifficulty
+    let difficulty: RecipeDifficulty?
 }
 
-enum RecipeDifficulty {
+enum RecipeDifficulty: String, Codable {
     case Easy, Meh, Hard
     
-    var emoji: String {
+    var emoji: String? {
         switch self {
         case .Easy:
             return "😬"

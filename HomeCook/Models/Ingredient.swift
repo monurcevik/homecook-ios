@@ -5,7 +5,7 @@ struct Ingredient: Codable {
     let unit: IngredientUnit?
 }
 
-enum IngredientUnit: Codable {
+enum IngredientUnit: String, Codable {
     case TableSpoon, TeaSpoon, MilliLiter, Liter, Milligram, Gram, Kilogram, Cup
     
     var displayName: String {

@@ -2,7 +2,7 @@ import KeychainSwift
 
 class KeychainService {
     static var shared: KeychainService = {
-        return KeychainManager(keychain: KeychainSwift())
+        return KeychainService(keychain: KeychainSwift())
     }()
     private let keychain: KeychainSwift
     
