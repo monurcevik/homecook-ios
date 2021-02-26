@@ -1,8 +1,31 @@
-//
-//  Ingredient.swift
-//  HomeCook
-//
-//  Created by Onur Cevik on 22.02.2021.
-//
+struct Ingredient: Codable {
+    let id: Int?
+    let name: String?
+    let amount: Double?
+    let unit: IngredientUnit?
+}
 
-import Foundation
+enum IngredientUnit: String, Codable {
+    case TableSpoon, TeaSpoon, MilliLiter, Liter, Milligram, Gram, Kilogram, Cup
+    
+    var displayName: String {
+        switch self {
+        case .TableSpoon:
+            return "tbsp"
+        case .TeaSpoon:
+            return "tsp"
+        case .MilliLiter:
+            return "mL"
+        case .Liter:
+            return "L"
+        case .Milligram:
+            return "mg"
+        case .Gram:
+            return "g"
+        case .Kilogram:
+            return "kg"
+        case .Cup:
+            return "cup"
+        }
+    }
+}
